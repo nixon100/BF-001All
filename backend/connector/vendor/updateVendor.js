@@ -1,7 +1,7 @@
 const Vendorlist = require("../../schema/VendorList");
 const { returnResponseJson } = require("../../utils");
 
-module.exports.updateVendor = async (id, updateData) => {
+const updateVendor = async (id, updateData) => {
     try {
         // Check if vendor exists
         const existingVendor = await Vendorlist.findById(id);
@@ -65,3 +65,4 @@ module.exports.updateVendor = async (id, updateData) => {
     }
 };
 
+module.exports = {updateVendor};

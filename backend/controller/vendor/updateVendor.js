@@ -1,7 +1,7 @@
 const vendorService = require('../../connector/vendor/updateVendor');
 const { returnResponseJson } = require('../../utils');
 
-module.exports.updateVendor = async (req, res) => {
+const updateVendor = async (req, res) => {
     try {
         const { id } = req.params;
 
@@ -45,3 +45,4 @@ module.exports.updateVendor = async (req, res) => {
     }
 };
 
+module.exports = {updateVendor};

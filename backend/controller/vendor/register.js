@@ -1,7 +1,7 @@
 const vendorService = require('../../connector/vendor/register');
 const { returnResponseJson } = require('../../utils');
 
-module.exports.registerVendor = async (req, res) => {
+const registerVendor = async (req, res) => {
     try {
         // Check if request body exists
         if (!req.body || Object.keys(req.body).length === 0) {
@@ -24,4 +24,4 @@ module.exports.registerVendor = async (req, res) => {
     }
 };
 
-// module exports = registerVendor;
+module.exports = {registerVendor};

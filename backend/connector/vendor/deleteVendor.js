@@ -1,7 +1,7 @@
 const Vendorlist = require("../../schema/VendorList");
 const { returnResponseJson } = require("../../utils");
 
-module.exports.softDeleteVendor = async (id) => {
+const softDeleteVendor = async (id) => {
     try {
         // Check if vendor exists
         const vendor = await Vendorlist.findById(id);
@@ -52,3 +52,4 @@ module.exports.softDeleteVendor = async (id) => {
     }
 };
 
+module.exports = {softDeleteVendor};

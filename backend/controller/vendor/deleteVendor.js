@@ -2,7 +2,7 @@ const vendorService = require("../../connector/vendor/deleteVendor");
 const { returnResponseJson } = require("../../utils");
 
 // Controller with additional authorization check
-module.exports.deleteVendorWithAuth = async (req, res) => {
+const deleteVendorWithAuth = async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -35,4 +35,4 @@ module.exports.deleteVendorWithAuth = async (req, res) => {
   }
 };
 
-
+module.exports = {deleteVendorWithAuth};

@@ -1,7 +1,7 @@
 const Vendorlist = require("../../schema/VendorList");
 const { returnResponseJson } = require("../../utils");
 
-module.exports.createVendor = async (obj) => {
+const createVendor = async (obj) => {
     try {
         const { username, email, phonenumber, address } = obj;
 
@@ -38,3 +38,4 @@ module.exports.createVendor = async (obj) => {
     }
 };
 
+module.exports = {createVendor};

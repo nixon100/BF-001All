@@ -1,7 +1,7 @@
 const Vendorlist = require("../../schema/VendorList");
 const { returnResponseJson } = require("../../utils");
 
-module.exports.getAllVendors = async (query = {}) => {
+const getAllVendors = async (query = {}) => {
     try {
         // Get all vendors with optional filtering
         const vendors = await Vendorlist.find(query)
@@ -24,3 +24,4 @@ module.exports.getAllVendors = async (query = {}) => {
     }
 };
 
+module.exports = {getAllVendors};

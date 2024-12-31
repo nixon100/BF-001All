@@ -1,7 +1,7 @@
 const vendorService = require('../../connector/vendor/getVendor');
 const { returnResponseJson } = require('../../utils');
 
-module.exports.getAllVendors = async (req, res) => {
+const getAllVendors = async (req, res) => {
     try {
         // Get query parameters if any
         const query = {};
@@ -28,3 +28,4 @@ module.exports.getAllVendors = async (req, res) => {
     }
 };
 
+module.exports = {getAllVendors};
