@@ -14,13 +14,13 @@ const deleteVendorWithAuth = async (req, res) => {
     }
 
     // Check if user has permission to delete
-    if (!req.user.isAdmin) {
-      return res
-        .status(403)
-        .json(
-          returnResponseJson("Not authorized to delete vendors", 403, null)
-        );
-    }
+    // if (!req.user.isAdmin) {
+    //   return res
+    //     .status(403)
+    //     .json(
+    //       returnResponseJson("Not authorized to delete vendors", 403, null)
+    //     );
+    // }
 
     // Call service to delete vendor
     const response = await vendorService.softDeleteVendor(id);
